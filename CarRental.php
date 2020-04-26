@@ -21,9 +21,13 @@ $sql = "Select ID_No, FN_Initial, Last_Name from customer";
 %result = $conn -> query($sql);
 if ($result)
 {
-  echo "Id No: .$row["ID_No"]. " ". $row["FN_Initial"]. " " .$row["Last_Name"]. "<br>";
+  while($row = $result -> fetch_assoc())
+    {
+      echo "Id No: .$row["ID_No"]. " ". $row["FN_Initial"]. " " .$row["Last_Name"]. "<br>";
+    }
 }else 
-{ echo "0 results";
+{ 
+  echo "0 results";
 }
 
 ?>

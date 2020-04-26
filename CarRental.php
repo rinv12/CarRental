@@ -17,7 +17,7 @@ if($conn-> connect_error) {
 echo "Connected Successfully <br>";
 echo "Showing the database results <br>";
 echo "------------------------------<br>;
-$sql = "Select ID_No, FN_Initial, Last_Name from customer";
+$sql = "select ID_No, FN_Initial, Last_Name from customer";
 %result = $conn -> query($sql);
 if ($result)
 {
